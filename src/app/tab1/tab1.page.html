@@ -7,7 +7,45 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
+  <!-- <form (ngSubmit)="register()" #registerForm="ngForm"> -->
+  <!-- <form [formGroup]="signinForm"> -->
+  <ion-row>
+    <ion-col>
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <!-- <ion-input class="emailClass" type="text" formControlName="username" required placeholder="User Name"
+              [class.invalid]="!signinForm.controls.username.valid && (signinForm.controls.username.dirty || submitAttempt)">
+            </ion-input> -->
+          <ion-input class="emailClass" type="text" placeholder="User Name" [(ngModel)]="username">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="password">
+            <!-- [class.invalid]="!signinForm.controls.password.valid && (signinForm.controls.password.dirty || submitAttempt)"> -->
+          </ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <!-- <ion-button expand="block" color="primary" (click)="signin()">Sign in</ion-button> -->
+      <ion-button expand="block" color="primary" (click)="signin()">Sign in
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <!-- </form> -->
+
+
+
+
+  <!-- <ion-card class="welcome-card">
       <ion-img src="/assets/shapes.svg"></ion-img>
       <ion-card-header>
         <ion-card-subtitle>Get Started</ion-card-subtitle>
@@ -37,5 +75,5 @@
         <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
         <ion-label>Theme Your App</ion-label>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 </ion-content>

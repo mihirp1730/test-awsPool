@@ -1,5 +1,7 @@
 {
   "name": "awsTest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
